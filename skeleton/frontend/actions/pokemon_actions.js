@@ -13,5 +13,5 @@ export const requestAllPokemon = () => (dispatch) => (
     .then(pokemon => dispatch(receiveAllPokemon(pokemon)))
 );
 
-window.fetchAllPokemon = APIUtil.fetchAllPokemon;
+// window.fetchAllPokemon = APIUtil.fetchAllPokemon;
 // window.requestAllPokemon = APIUtil.requestAllPokemon;

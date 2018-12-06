@@ -7,4 +7,4 @@ export const selectAllPokemon = (state) => {
   return result;
 };
 
-window.selectAllPokemon = selectAllPokemon;
+// window.selectAllPokemon = selectAllPokemon;

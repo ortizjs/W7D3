@@ -9,14 +9,14 @@ import Root from './components/root';
 document.addEventListener('DOMContentLoaded', () => {
   const rootEl = document.getElementById('root'); //hook
   const store = configureStore();
-  window.getState = store.getState; 
-  window.dispatch = store.dispatch;
+  // window.getState = store.getState; 
+  // window.dispatch = store.dispatch;
   ReactDOM.render(
     <Root store = {store}/>, rootEl);
 });
 
 
-window.fetchAllPokemon = fetchAllPokemon;
-window.requestAllPokemon = requestAllPokemon;
-window.receiveAllPokemon = receiveAllPokemon;
-window.selectAllPokemon = selectAllPokemon;
+// window.fetchAllPokemon = fetchAllPokemon;
+// window.requestAllPokemon = requestAllPokemon;
+// window.receiveAllPokemon = receiveAllPokemon;
+// window.selectAllPokemon = selectAllPokemon;

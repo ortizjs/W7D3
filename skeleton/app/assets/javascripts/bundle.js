@@ -114,8 +114,8 @@ var requestAllPokemon = function requestAllPokemon() {
       return dispatch(receiveAllPokemon(pokemon));
     });
   };
-};
-window.fetchAllPokemon = _util_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchAllPokemon"]; // window.requestAllPokemon = APIUtil.requestAllPokemon;
+}; // window.fetchAllPokemon = APIUtil.fetchAllPokemon;
+// window.requestAllPokemon = APIUtil.requestAllPokemon;
 
 /***/ }),
 
@@ -163,10 +163,6 @@ function (_React$Component) {
 
   _createClass(PokemonIndex, [{
     key: "componentDidMount",
-    // constructor(props) {
-    //   super(props);
-    // 
-    // }
     value: function componentDidMount() {
       this.props.requestAllPokemon();
     }
@@ -310,17 +306,16 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
   var rootEl = document.getElementById('root'); //hook
 
-  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_4__["default"])(); // window.getState = store.getState; 
+  // window.dispatch = store.dispatch;
+
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_6__["default"], {
     store: store
   }), rootEl);
-});
-window.fetchAllPokemon = _util_api_util__WEBPACK_IMPORTED_MODULE_3__["fetchAllPokemon"];
-window.requestAllPokemon = _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_2__["requestAllPokemon"];
-window.receiveAllPokemon = _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_2__["receiveAllPokemon"];
-window.selectAllPokemon = _reducers_selectors__WEBPACK_IMPORTED_MODULE_5__["selectAllPokemon"];
+}); // window.fetchAllPokemon = fetchAllPokemon;
+// window.requestAllPokemon = requestAllPokemon;
+// window.receiveAllPokemon = receiveAllPokemon;
+// window.selectAllPokemon = selectAllPokemon;
 
 /***/ }),
 
@@ -408,8 +403,7 @@ var selectAllPokemon = function selectAllPokemon(state) {
     return pokemon;
   });
   return result;
-};
-window.selectAllPokemon = selectAllPokemon;
+}; // window.selectAllPokemon = selectAllPokemon;
 
 /***/ }),
 
