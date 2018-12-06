@@ -7,6 +7,8 @@ const Root = ({ store }) => (
   <Provider store={store}>
     <HashRouter>
       <Route path="/" component={PokemonIndexContainer} />
+      // <Route path="/pokemon/:pokemonId" component={PokemonDetailContainer} />
+      
     </HashRouter>
   </Provider>
 );
