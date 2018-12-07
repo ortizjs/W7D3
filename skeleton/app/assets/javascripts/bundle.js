@@ -182,7 +182,12 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.requestSinglePokemon(this.props.match.params.pokemonId);
-    }
+    } // componentDidUpdate(prevProps) {
+    //   if (this.props === prevProps) {
+    //     this.props.requestSinglePokemon(this.props.match.params.pokemonId)
+    //   }
+    // }
+
   }, {
     key: "render",
     value: function render() {
@@ -191,7 +196,13 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Loading...");
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.pokemon.name);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.pokemon.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: this.props.pokemon.image_url
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.items.map(function (item) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, item.name, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: item.image_url
+        }));
+      })));
     }
   }]);
 
@@ -221,7 +232,8 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   // debugger
   return {
-    pokemon: state.entities.pokemon[ownProps.match.params.pokemonId] || {}
+    pokemon: state.entities.pokemon[ownProps.match.params.pokemonId] || {},
+    items: state.entities.items || {}
   };
 };
 
@@ -435,11 +447,11 @@ var Root = function Root(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
     store: store
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["HashRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
-    path: "/",
-    component: _pokemon_pokemon_index_container__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
     path: "/pokemon/:pokemonId",
     component: _pokemon_pokemon_detail_container__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+    path: "/",
+    component: _pokemon_pokemon_index_container__WEBPACK_IMPORTED_MODULE_2__["default"]
   }))));
 };
 

@@ -7,7 +7,10 @@ import { requestSinglePokemon } from '../../actions/pokemon_actions';
 const mapStateToProps = (state, ownProps) => {
   // debugger
   
-  return {pokemon: state.entities.pokemon[ownProps.match.params.pokemonId] || {}}
+  return {
+    pokemon: state.entities.pokemon[ownProps.match.params.pokemonId] || {},
+    items: state.entities.items || {}
+  };
 };
 
 const mapDispatchToProps = dispatch => ({
