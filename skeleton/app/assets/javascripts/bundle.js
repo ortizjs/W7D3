@@ -191,14 +191,15 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // debugger
+      debugger;
+
       if (!this.props.pokemon) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Loading...");
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.pokemon.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: this.props.pokemon.image_url
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.items.map(function (item) {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, Object.values(this.props.items).map(function (item) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, item.name, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: item.image_url
         }));
